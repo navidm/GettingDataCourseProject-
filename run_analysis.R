@@ -115,4 +115,5 @@ names(extMeasureDS) <- gsub("angleZgravityMean","angleGravityMeanZ" ,names(extMe
 # to calculate the mean for all the variables
 aggregatedDS <- summarise_each(group_by(extMeasureDS, subjectID,activity),funs(mean))
 
+# Writing the tidy dataset into a txt file
 write.table(aggregatedDS, file = "experimentTidyDS.txt", row.name = FALSE)
