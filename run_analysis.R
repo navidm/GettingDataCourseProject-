@@ -2,6 +2,9 @@
 # to the folder contaning datasets (the one downloaded for Course Project)
 # and copy this script into that folder
 
+# Since the variable names in the tidy dataset are relatively long we decided 
+# to use CamelCase for the variable names to make them more readble 
+
 # Setting working directory to the project forlder
 setwd("The address to the folder contaning datasets and this script")
 
@@ -76,7 +79,7 @@ extMeasureDS[,2] <- activitiesDS
 
 # Step 4
 # Updating variable names to more descriptive ones Note that since 
-# the namings are too long,for the sake of readability, CamelCase were usee 
+# the namings are too long,for the sake of readability, CamelCase were use 
 names(extMeasureDS) <- gsub("tBodyAccJerk","linearAccelerationTime" ,names(extMeasureDS))
 names(extMeasureDS) <- gsub("tBodyAcc","bodyAccelerationTime" ,names(extMeasureDS))
 names(extMeasureDS) <- gsub("tBodyGyroJerk","angularVelocityTime" ,names(extMeasureDS))
